@@ -4,8 +4,16 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
 import StyledContainer from './General.styled';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { getContacts } from 'redux/operations';
 
 export function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getContacts());
+  }, [dispatch]);
   return (
     <>
       <StyledContainer>

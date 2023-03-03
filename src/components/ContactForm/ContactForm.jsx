@@ -5,7 +5,8 @@ import { StyledBtn } from './contactForm.styled';
 import { StyledForm } from './contactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/selectors';
-import { addContact } from 'redux/slice';
+//import { addContact } from 'redux/slice';
+import { addContact } from 'redux/operations';
 
 export function ContactForm() {
   const [name, setName] = useState('');
